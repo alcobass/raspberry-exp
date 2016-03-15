@@ -7,7 +7,10 @@ class MorseTranslator:
         constants = MorseConstants()
         res = []
         for a in inputText:
-            res.append(constants.DICT[a])
+            if a == ' ':
+                res.append(constants.WORD_PAUSE)
+            else :
+                res.append(constants.DICT[a])
         return res
 
     def __init__():

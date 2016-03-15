@@ -1,7 +1,10 @@
 #!/usr/bin/python
 
-from morse_translator import MorseTranslator
+from signal_generator import SignalGenerator
 
-print MorseTranslator.textToMorse('123')
+gen = SignalGenerator(600)
+gen.signalString('SOS SOS SOS SOS');
+
+#print MorseTranslator.textToMorse('123')
 
 

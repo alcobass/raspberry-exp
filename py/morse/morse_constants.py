@@ -2,6 +2,7 @@ import csv
 
 class MorseConstants:
     DICT_FILE_NAME = 'morse-dict.csv'
+    WORD_PAUSE = 'wp'
 
     MULTIPLIER_POINT = 1
     MULTIPLIER_DASH = 3
@@ -23,7 +24,7 @@ class MorseConstants:
         print self.DICT
 
     def main():
-        print '111'
+        #        print '111'
         print DICT
 
 if __name__ == "__main__":
