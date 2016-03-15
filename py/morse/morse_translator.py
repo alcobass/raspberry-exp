@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from morse_constants import MorseConstants
 
 class MorseTranslator:
@@ -10,7 +12,9 @@ class MorseTranslator:
             if a == ' ':
                 res.append(constants.WORD_PAUSE)
             else :
-                res.append(constants.DICT[a])
+                if a.upper() in constants.DICT:
+                    print a
+                    res.append(constants.DICT[a.upper()])
         return res
 
     def __init__():

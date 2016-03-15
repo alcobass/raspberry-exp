@@ -1,4 +1,7 @@
-import csv
+# -*- coding: utf-8 -*-
+
+#import unicodecsv
+import codecs
 
 class MorseConstants:
     DICT_FILE_NAME = 'morse-dict.csv'
@@ -13,19 +16,18 @@ class MorseConstants:
     DICT = {}
 
     def __init__(self):
-        reader = csv.reader(open(self.DICT_FILE_NAME, 'r'))
+        #        reader = csv.reader(codecs.open(self.DICT_FILE_NAME,'rU','utf-8'))
+        #reader = unicodecvs.reader(self.DICT_FILE_NAME, encoding='utf-8')
+        fo = codecs.open(self.DICT_FILE_NAME,'rU','utf-8')
+        #print reader
         self.DICT = {}
-        for row in reader:
-            if len(row) < 2:
+        for row in fo:
+            #print row
+            fList = row.split(',', 1)
+            if len(fList) < 2:
                 continue
-            k = row[0]
-            v = row[1]
+            k = fList[0]
+            v = fList[1]
             self.DICT[k] = v
-        print self.DICT
+        #print self.DICT
 
-    def main():
-        #        print '111'
-        print DICT
-
-if __name__ == "__main__":
-     main()

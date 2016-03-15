@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import RPi.GPIO as GPIO
 import time as time
 from morse_translator import MorseTranslator
@@ -51,6 +53,7 @@ class SignalGenerator():
 
     def signalString(self,st):
         morseMessage = MorseTranslator.textToMorse(st)
+        print morseMessage
         self.__signalMessage__(morseMessage)
 
 
