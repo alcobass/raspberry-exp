@@ -1,7 +1,7 @@
-from morse_constants import MorseConstants
+#!/usr/bin/python
 
-print 111
+from morse_translator import MorseTranslator
 
-const = MorseConstants()
+print MorseTranslator.textToMorse('123')
 
 
